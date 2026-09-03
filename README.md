@@ -46,7 +46,6 @@ Functions:
    https://ai-assistants-samples-1111-dev.twil.io/tools/flex-handover
    https://ai-assistants-samples-1111-dev.twil.io/tools/google-maps
    https://ai-assistants-samples-1111-dev.twil.io/tools/internet-search
-   https://ai-assistants-samples-1111-dev.twil.io/tools/slope-calculator
    https://ai-assistants-samples-1111-dev.twil.io/tools/studio-handover
 Assets:
 ```
@@ -171,18 +170,6 @@ Additionally to the configuration below, you can use the following query paramet
 - `limitDomains` — You can pass multiple ones to limit search results to specific domains. For example `?limitDomains=www.segment.com&limitDomains=www.twilio.com` will only search those two domains.
 - `n` — specifies the amount of search results you want to take into consideration for the response. Example: `?n=2`
 - `summarize` — If set to `?summarize=true`, it will optionally run the request through OpenAI's GPT-3.5-Turbo for a proper answer that gets pushed into your Assistant. This requires the `OPENAI_API_KEY` environment variable to be set.
-
-### Slope Calculator
-
-Tool to calculate the slope (grade) of a route given the elevation gain (ascent) in meters and the distance traveled in meters. Returns the slope both as a percentage and in degrees.
-
-| Field           | Configuration                                                                                                                       |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **Name**        | `Slope Calculator`                                                                                                                    |
-| **Description** | `Use this to calculate the slope/grade of a route given the elevation gain in meters and the distance traveled in meters.`           |
-| **Input**       | <pre lang="typescript"><code>{&#13; ascent_meters: number; // elevation gain in meters&#13; distance_meters: number; // distance traveled in meters&#13;}</code></pre> |
-| **Method**      | `GET`                                                                                                                                 |
-| **URL**         | `https://<your-functions-domain>.twil.io/tools/slope-calculator`                                                                     |
 
 ### UI Tools
 
